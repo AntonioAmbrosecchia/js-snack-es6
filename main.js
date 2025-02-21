@@ -20,8 +20,12 @@ console.log(biciclette);
 // Uso in ciclo for per trovare la bici col peso minore
 let biciLeggera = biciclette[0];
 
-for (let index = 0; index < biciclette.length; index++) {
-    if (condition) {
-
+for (let index = 1; index < biciclette.length; index++) {
+    if (biciclette[index].peso < biciLeggera.peso) {
+        biciLeggera = biciclette[index];
     }
 }
+
+console.log("la bici più teggera è la:", biciLeggera.nome, "che pesa", biciLeggera.peso, "kg");
+
+
